@@ -1,0 +1,142 @@
+:root {
+    --primary-blue: #576566;  /* Deep Professional Blue */
+    --secondary-orange: #b92727; /* Vibrant Alert Orange */
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+    --text-dark: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Responsive Image Styling --- */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Smooth corners */
+    margin: 20px 0;
+}
+
+/* --- Header & Navbar Styling (Blue with Orange Text) --- */
+header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 0;
+}
+
+header h1 {
+    display: inline-block;
+}
+
+nav ul {
+    float: center;
+    list-style: none;
+    margin-top: 1px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover & Active States (Switch to Orange) */
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--secondary-orange);
+    color: var(--white);
+    border-radius: 4px;
+}
+
+/* --- Main Content Styling --- */
+main {
+    padding: 20px 0;
+}
+
+main h2 {
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+main p {
+    margin-bottom: 15px;
+}
+
+/* --- Footer Styling (Blue with Orange Highlights) --- */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 30px 0 10px 0;
+    margin-top: 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Responsive grid */
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+footer h3 {
+    color: var(--secondary-orange); /* Orange Heading */
+    margin-bottom: 15px;
+}
+
+.map iframe {
+    border-radius: 8px; /* Smooth corners for map */
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+}
+
+/* Mobile Responsiveness for Grid */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
